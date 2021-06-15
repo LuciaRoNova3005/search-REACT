@@ -1,21 +1,20 @@
 import React from "react";
-import Pokemon from "./Pokemon";
+import Characters from "./Characters";
 
-const Pokelist = (props) => {
+const CharactersList = (props) => {
+  const charactersElements = props.characters.map((character) => {
+    return (
+      <li key={character.id}>
+        <Characters character={character} />
+      </li>
+    );
+  });
+
   return (
-    <div className="container">
-      {props.dataList.map((element) => (
-        <Pokemon
-          handleFav={props.handleFav}
-          key={element.id}
-          img={element.url}
-          name={element.name}
-          types={element.types}
-          id={element.id}
-        ></Pokemon>
-      ))}
-    </div>
+    <section>
+      <ul className="">{charactersElements}</ul>
+    </section>
   );
 };
 
-export default Pokelist;
+export default CharactersList;

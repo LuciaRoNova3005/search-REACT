@@ -1,4 +1,4 @@
-function Pokemon(props) {
+function Characters(props) {
   return (
     <ul className="card" id={props.id} onClick={props.handleFav}>
       <li>
@@ -6,16 +6,8 @@ function Pokemon(props) {
       </li>
 
       <li className="tittle">{props.name}</li>
-
-      <ul className="types">
-        {props.types.map((element, index) => (
-          <li className="text" key={index}>
-            {element}
-          </li>
-        ))}
-      </ul>
     </ul>
   );
 }
 
-export default Pokemon;
+export default Characters;

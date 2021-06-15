@@ -1,7 +1,8 @@
 import "../stylesheets/App.css";
 import React, { useState, useEffect } from "react";
 import Logo from "../img/Logo.png";
-import getApiData from "../services/Api";
+import getApiData from "../Services/Api";
+import CharactersList from "../components/CharactersList";
 
 const App = () => {
   /*Un array vacío para definir el estado
@@ -21,7 +22,9 @@ const App = () => {
           <img src={Logo} alt="Logo Rick and morty"></img>
         </h1>
       </header>
-      <main></main>
+      <main>
+        <CharactersList characters={characters}></CharactersList>
+      </main>
     </>
   );
 };

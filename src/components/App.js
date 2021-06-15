@@ -5,10 +5,11 @@ import getApiData from "../Services/Api";
 import CharactersList from "../components/CharactersList";
 
 const App = () => {
-  /*Un array vacío para definir el estado
-   *  const [users, setUsers] = useState([]);*/
+  /*Un array vacío para definir el estado inicial
+   */
   const [characters, setcharacters] = useState([]);
-
+  /*Empieza ejecutarse en la parte de montaje y es lo que hace que salga los datos
+   */
   useEffect(() => {
     getApiData().then((charactersData) => {
       setcharacters(charactersData);

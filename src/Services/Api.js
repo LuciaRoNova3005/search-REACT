@@ -7,15 +7,15 @@ const getApiData = () => {
       .then((data) => {
         /*Tenemos los datos de la api y los limpiamos
          */
-        const cleanData = data.results.map((user) => {
+        const cleanData = data.results.map((character) => {
           return {
-            id: user.id,
-            img: user.image,
-            name: user.name,
-            specie: user.species,
-            origin: user.location.name,
-            episode: user.episode,
-            status: user.status,
+            id: character.id,
+            img: character.image,
+            name: character.name,
+            specie: character.species,
+            origin: character.location.name,
+            episode: character.episode,
+            status: character.status,
           };
         });
         return cleanData;

@@ -1,31 +1,18 @@
 import "../stylesheets/App.css";
+import React, { useState, useEffect } from "react";
 import Logo from "../img/Logo.png";
-import list from "../data/Api";
-import Pokelist from "./Pokelist";
-import React, { useState } from "react";
-import Pokelistfav from "./Pokelistfav";
+import getApiData from "../services/Api";
 
-function App(props) {
-  const [data] = useState(list);
-  const [pokemonFav, setFavs] = useState([]);
+const App = () => {
+  /*Un array vacío para definir el estado
+   *  const [users, setUsers] = useState([]);*/
+  const [characters, setcharacters] = useState([]);
 
-  const handleFav = (ev) => {
-    const favPokeId = data.find(
-      (fav) => fav.id === parseInt(ev.currentTarget.id)
-    );
-
-    if (!pokemonFav.includes(favPokeId)) {
-      setFavs([...pokemonFav, favPokeId]);
-      console.log(pokemonFav);
-
-      return;
-    }
-    const newFavoriters = pokemonFav.filter(
-      (pokemon) => pokemon.id !== parseInt(ev.currentTarget.id)
-    );
-    setFavs(newFavoriters);
-    console.log(pokemonFav);
-  };
+  useEffect(() => {
+    getApiData().then((charactersData) => {
+      setcharacters(charactersData);
+    });
+  }, []);
 
   return (
     <>
@@ -37,6 +24,6 @@ function App(props) {
       <main></main>
     </>
   );
-}
+};
 
 export default App;

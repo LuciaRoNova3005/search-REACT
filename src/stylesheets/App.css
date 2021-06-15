@@ -1,42 +1,4 @@
-.tittle {
+.logo {
   margin: auto;
   text-align: center;
-  text-transform: capitalize;
-  font-size: 20px;
-  font-weight: bold;
-}
-.tittle1 {
-  margin: 20px;
-  font-size: 30px;
-  font-weight: bold;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-}
-.card {
-  background-color: lightblue;
-  box-sizing: border-box;
-  border: 5px;
-  border-color: black;
-  margin: 10px;
-  text-align: center;
-}
-.image {
-  width: 150px;
-  position: center;
-}
-.types {
-  display: flex;
-  flex-direction: row;
-}
-.text {
-  text-transform: capitalize;
-  background-color: lightslategray;
-  padding: 5px;
-  border-radius: 5px;
-  color: white;
-  margin: 10px 10px 10px 20px;
 }

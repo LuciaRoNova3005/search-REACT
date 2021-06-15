@@ -1,4 +1,5 @@
 import "../stylesheets/App.css";
+import Logo from "../img/Logo.png";
 import list from "../data/list.json";
 import Pokelist from "./Pokelist";
 import React, { useState } from "react";
@@ -29,7 +30,9 @@ function App(props) {
   return (
     <>
       <header>
-        <h1 className="">Mi lista de pokemon</h1>
+        <h1 className="logo">
+          <img src={Logo} alt="Logo Rick and morty"></img>
+        </h1>
       </header>
       <main></main>
     </>

@@ -1,6 +1,6 @@
 import "../stylesheets/App.css";
 import Logo from "../img/Logo.png";
-import list from "../data/list.json";
+import list from "../data/Api";
 import Pokelist from "./Pokelist";
 import React, { useState } from "react";
 import Pokelistfav from "./Pokelistfav";

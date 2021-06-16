@@ -8,7 +8,7 @@ const getApiData = () => {
         /*Tenemos los datos de la api y los limpiamos
          sort() invoca una función que recibe dos valores y los compara*/
         const orderResults = data.results.sort((a, b) =>
-          a.name.localeCompare(b.name)
+          a.name > b.name ? 1 : a.name < b.name ? -1 : 0
         );
         const cleanData = orderResults.map((character) => {
           return {

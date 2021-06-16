@@ -17,7 +17,9 @@ const CharacterDetail = (props) => {
         <img src={props.character.img} alt={props.name} />
         <h4>{props.character.name}</h4>
         <ul>
-          <i className={`${getStatus()}`}>{props.character.status}</i>
+          <li>
+            <i className={`${getStatus()}`}>{props.character.status}</i>
+          </li>
           <li>Origen: {props.character.origin}</li>
           <li>Episode: {props.character.episode}</li>
         </ul>

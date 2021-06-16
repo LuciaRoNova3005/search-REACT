@@ -17,8 +17,12 @@ const App = () => {
   const [filterSpecies, setFilterSpecies] = useState(
     ls.get("filterSpecies", "")
   );
-
-  const renderCharacterDetail = (routerProps, props) => {
+  /* Reset */
+  const handleReset = () => {
+    setFilterName("");
+    setFilterSpecies("");
+  };
+  const renderCharacterDetail = (routerProps, onClick = { handleReset }) => {
     const routerId = routerProps.match.params.Id;
 
     const characterFound = characters.find(
@@ -72,6 +76,7 @@ const App = () => {
         return character.species === filterSpecies;
       }
     });
+
   return (
     <>
       <header>
@@ -83,6 +88,7 @@ const App = () => {
         <Switch>
           <Route exact path="/">
             <Filters
+              handleReset={handleReset}
               handleFilter={handleFilter}
               filterName={filterName}
               filterSpecies={filterSpecies}

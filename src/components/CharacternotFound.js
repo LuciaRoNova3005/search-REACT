@@ -10,7 +10,10 @@ const CharacterNotFound = (props) => {
           src="https://media.giphy.com/media/l41lI4bYmcsPJX9Go/giphy.gif"
           alt="Rick"
         />
-        <Link to="/">Volver</Link>
+
+        <Link to="/" onClick={props.handleReset}>
+          Volver
+        </Link>
       </section>
     </div>
   );

@@ -27,7 +27,7 @@ const App = () => {
   useEffect(() => {
     ls.set("characters", characters);
   }, [characters]);
-  /*Este Useeffect nos guarda en localsotrage cuando los personajes cambian,se ejecuta cuando characters cambia
+  /*Este Useeffect se ejecuta cuando characters cambia y lo guarda en local
    */
 
   return (

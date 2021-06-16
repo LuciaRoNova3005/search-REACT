@@ -10,6 +10,10 @@ const App = () => {
   /*Un array vacío para definir el estado inicial
    pasa una key y un valor defaulft*/
   const [characters, setcharacters] = useState(ls.get("characters", []));
+  const [filterName, setFilterName] = useState(ls.get("filterName", ""));
+  const [filterSpecies, setFilterSpecies] = useState(
+    ls.get("filterSpecies", "")
+  );
   /*Empieza ejecutarse en la parte de montaje y es lo que hace que salga los datos
    */
   useEffect(() => {
@@ -25,11 +29,32 @@ const App = () => {
    */
 
   useEffect(() => {
-    ls.set("characters", characters);
-  }, [characters]);
-  /*Este Useeffect se ejecuta cuando characters cambia y lo guarda en local
-   */
+    ls.set("character", characters);
+    ls.set("filterName", filterName);
+    ls.set("filterSpecies", filterSpecies);
+  }, [characters, filterName, filterSpecies]);
+  /*Este Useeffect se ejecuta cuando characters cambia y lo guarda en local*/
 
+  const handleFilter = (data) => {
+    if (data.key === "name") {
+      setFilterName(data.value);
+    } else if (data.key === "species") {
+      setFilterSpecies(data.value);
+    }
+  };
+  /* Data un parametro x que se le pasa a la función para que te recoja los value */
+
+  const filtercharacters = characters
+    .filter((character) => {
+      return character.name.toLowerCase().includes(filterName.toLowerCase());
+    })
+    .filter((character) => {
+      if (filterSpecies === "") {
+        return true;
+      } else {
+        return character.species === filterSpecies;
+      }
+    });
   return (
     <>
       <header>
@@ -38,8 +63,12 @@ const App = () => {
         </h1>
       </header>
       <main>
-        <Filters></Filters>
-        <CharactersList characters={characters}></CharactersList>
+        <Filters
+          handleFilter={handleFilter}
+          filterName={filterName}
+          filterSpecies={filterSpecies}
+        ></Filters>
+        <CharactersList characters={filtercharacters}></CharactersList>
       </main>
     </>
   );

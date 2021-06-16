@@ -6,8 +6,11 @@ const getApiData = () => {
       .then((response) => response.json())
       .then((data) => {
         /*Tenemos los datos de la api y los limpiamos
-         */
-        const cleanData = data.results.map((character) => {
+         sort() invoca una función que recibe dos valores y los compara*/
+        const orderResults = data.results.sort((a, b) =>
+          a.name.localeCompare(b.name)
+        );
+        const cleanData = orderResults.map((character) => {
           return {
             id: character.id,
             img: character.image,

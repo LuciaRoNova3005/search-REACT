@@ -18,7 +18,7 @@ const App = () => {
     ls.get("filterSpecies", "")
   );
 
-  const renderCharacterDetail = (routerProps) => {
+  const renderCharacterDetail = (routerProps, props) => {
     const routerId = routerProps.match.params.Id;
 
     const characterFound = characters.find(

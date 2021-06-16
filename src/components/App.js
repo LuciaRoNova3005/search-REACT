@@ -22,7 +22,7 @@ const App = () => {
     setFilterName("");
     setFilterSpecies("");
   };
-  const renderCharacterDetail = (routerProps, onClick = { handleReset }) => {
+  const renderCharacterDetail = (routerProps) => {
     const routerId = routerProps.match.params.Id;
 
     const characterFound = characters.find(
@@ -35,6 +35,7 @@ const App = () => {
       return <CharacterNotFound></CharacterNotFound>;
     }
   };
+
   /*Empieza ejecutarse en la parte de montaje y es lo que hace que salga los datos
    */
   useEffect(() => {

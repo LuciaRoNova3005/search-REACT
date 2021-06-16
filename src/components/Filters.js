@@ -18,6 +18,9 @@ const Filters = (props) => {
           value={props.filterSpecies}
         ></FilterSpecie>
       </form>
+      <button className="" onClick={props.handleReset}>
+        <i className="far fa-trash-alt"></i> Reset
+      </button>
     </section>
   );
 };

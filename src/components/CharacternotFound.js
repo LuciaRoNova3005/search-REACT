@@ -11,9 +11,7 @@ const CharacterNotFound = (props) => {
           alt="Rick"
         />
 
-        <Link to="/" onClick={props.handleReset}>
-          Volver
-        </Link>
+        <Link to="/">Volver</Link>
       </section>
     </div>
   );

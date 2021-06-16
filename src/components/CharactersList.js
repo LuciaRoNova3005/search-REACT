@@ -10,6 +10,9 @@ const CharactersList = (props) => {
           img={character.img}
           name={character.name}
           species={character.species}
+          status={character.status}
+          episode={character.episode}
+          origin={character.origin}
         />
       </li>
     );

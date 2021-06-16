@@ -13,9 +13,9 @@ const getApiData = () => {
             img: character.image,
             name: character.name,
             species: character.species,
-            origin: character.location.name,
-            episode: character.episode,
             status: character.status,
+            origin: character.origin.name,
+            episode: character.episode.length,
           };
         });
         return cleanData;

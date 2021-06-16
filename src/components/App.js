@@ -1,10 +1,12 @@
 import "../stylesheets/App.css";
 import React, { useState, useEffect } from "react";
+import { Route, Switch } from "react-router-dom";
 import Logo from "../img/Logo.png";
 import ls from "../Services/local-storage";
 import getApiData from "../Services/Api";
 import CharactersList from "../components/CharactersList";
 import Filters from "./Filters";
+import CharacterDetail from "./CharacterDetail";
 
 const App = () => {
   /*Un array vacío para definir el estado inicial
@@ -14,6 +16,20 @@ const App = () => {
   const [filterSpecies, setFilterSpecies] = useState(
     ls.get("filterSpecies", "")
   );
+
+  const renderCharacterDetail = (routerProps) => {
+    const routerId = routerProps.match.params.Id;
+
+    const characterFound = characters.find(
+      (element) => element.id === parseInt(routerId)
+    );
+
+    if (characterFound) {
+      return <CharacterDetail character={characterFound} />;
+    } else {
+      return <p>No se ha encontrado ningún personaje</p>;
+    }
+  };
   /*Empieza ejecutarse en la parte de montaje y es lo que hace que salga los datos
    */
   useEffect(() => {
@@ -63,12 +79,17 @@ const App = () => {
         </h1>
       </header>
       <main>
-        <Filters
-          handleFilter={handleFilter}
-          filterName={filterName}
-          filterSpecies={filterSpecies}
-        ></Filters>
-        <CharactersList characters={filtercharacters}></CharactersList>
+        <Switch>
+          <Route exact path="/">
+            <Filters
+              handleFilter={handleFilter}
+              filterName={filterName}
+              filterSpecies={filterSpecies}
+            ></Filters>
+            <CharactersList characters={filtercharacters}></CharactersList>
+          </Route>
+          <Route path="/character/:Id" render={renderCharacterDetail} />
+        </Switch>
       </main>
     </>
   );

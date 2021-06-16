@@ -8,6 +8,7 @@ import CharactersList from "../components/CharactersList";
 import Filters from "./Filters";
 import CharacterDetail from "./CharacterDetail";
 import CharacterNotFound from "./CharacternotFound";
+import { Link } from "react-router-dom";
 
 const App = () => {
   /*Un array vacío para definir el estado inicial
@@ -82,7 +83,9 @@ const App = () => {
     <>
       <header>
         <h1 className="logo">
-          <img src={Logo} alt="Logo Rick and morty"></img>
+          <Link to="/">
+            <img src={Logo} alt="Logo Rick and morty"></img>
+          </Link>
         </h1>
       </header>
       <main>

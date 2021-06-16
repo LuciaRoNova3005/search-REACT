@@ -1,6 +1,8 @@
 @import "../stylesheets/Core/reset.scss";
-@import "../stylesheets/Core/filter.scss";
-@import "../stylesheets/Core/CardList.scss";
+@import "../stylesheets/Componentes/filter.scss";
+@import "../stylesheets/Componentes/CardList.scss";
+@import "../stylesheets/Componentes/CardDetail.scss";
+
 .logo {
   margin: auto;
   padding-top: 30px;

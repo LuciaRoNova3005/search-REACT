@@ -13,9 +13,13 @@ const CharacterDetail = (props) => {
   return (
     <div>
       <Link to="/">Volver</Link>
-      <section>
-        <img src={props.character.img} alt={props.name} />
-        <h4>{props.character.name}</h4>
+      <section className="detail">
+        <img
+          className="detail__img"
+          src={props.character.img}
+          alt={props.name}
+        />
+        <h2>{props.character.name}</h2>
         <ul>
           <li>
             <i className={`${getStatus()}`}>{props.character.status}</i>

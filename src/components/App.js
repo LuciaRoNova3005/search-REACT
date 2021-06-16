@@ -7,6 +7,7 @@ import getApiData from "../Services/Api";
 import CharactersList from "../components/CharactersList";
 import Filters from "./Filters";
 import CharacterDetail from "./CharacterDetail";
+import CharacterNotFound from "./CharacternotFound";
 
 const App = () => {
   /*Un array vacío para definir el estado inicial
@@ -27,7 +28,7 @@ const App = () => {
     if (characterFound) {
       return <CharacterDetail character={characterFound} />;
     } else {
-      return <p>No se ha encontrado ningún personaje</p>;
+      return <CharacterNotFound></CharacterNotFound>;
     }
   };
   /*Empieza ejecutarse en la parte de montaje y es lo que hace que salga los datos

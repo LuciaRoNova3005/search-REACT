@@ -11,7 +11,7 @@ const FilterName = (props) => {
   return (
     <>
       <input
-        className=""
+        className="form__name"
         type="text"
         name="name"
         id="name"

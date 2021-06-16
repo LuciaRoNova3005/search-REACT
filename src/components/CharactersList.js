@@ -8,7 +8,7 @@ const CharactersList = (props) => {
   }
   const charactersElements = props.characters.map((character) => {
     return (
-      <li key={character.id}>
+      <li className="card" key={character.id}>
         <Card
           id={character.id}
           img={character.img}
@@ -24,7 +24,7 @@ const CharactersList = (props) => {
 
   return (
     <section>
-      <ul className="">{charactersElements}</ul>
+      <ul className="card-list">{charactersElements}</ul>
     </section>
   );
 };

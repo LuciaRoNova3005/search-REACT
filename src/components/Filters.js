@@ -8,7 +8,7 @@ const Filters = (props) => {
   };
   return (
     <section>
-      <form onSubmit={handleSubmit}>
+      <form className="form" onSubmit={handleSubmit}>
         <FilterName
           filterName={props.filterName}
           handleFilter={props.handleFilter}
@@ -17,10 +17,10 @@ const Filters = (props) => {
           handleFilter={props.handleFilter}
           value={props.filterSpecies}
         ></FilterSpecie>
+        <button className="" onClick={props.handleReset}>
+          <i className="far fa-trash-alt"></i> Reset
+        </button>
       </form>
-      <button className="" onClick={props.handleReset}>
-        <i className="far fa-trash-alt"></i> Reset
-      </button>
     </section>
   );
 };

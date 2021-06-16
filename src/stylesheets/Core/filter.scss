@@ -1,0 +1,10 @@
+.form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 50px;
+}
+.form__name {
+  color: white;
+}

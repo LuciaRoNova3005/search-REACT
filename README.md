@@ -1,83 +1,64 @@
-# Exercice
+# Enunciado y requisitos del ejercicio
 
-The exercise consists of developing a simple web page with React.
-To carry out the exercise, we suggest you follow these steps:
-1. Establish on paper the structure of components for the web.
-2. Create a new React application.
-3. Paint 1 card, collecting the information from the props.
-4. Paint all the cards.
-5. In addition to creating the App component, we must create two components, PokeList and Pokemon,
-respectively for the list and for the card of each Pokemon.
+El ejercicio consiste en desarrollar una página web con un listado de personajes de Rick and Morty, que podemos filtrar por el nombre del personaje.
 
-## Available Scripts
+## Listado de personajes
 
-In the project directory, you can run:
+[API](https://rickandmortyapi.com/documentation/#get-all-characters
 
-### `yarn start`
-To carry out the exercise, we suggest you follow these steps:
-1. Establish on paper the structure of components for the web.
-2. Create a new React application.
-3. Paint 1 card, collecting the information from the props.
-4. Paint all the cards.
-5. In addition to creating the App component, we must create two components, PokeList and Pokemon,
-respectively for the list and for the card of each Pokemon.
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Foto
+Nombre
+Especie
+Filtrado de personajes
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Detalle de personajes Implementamos la funcionalidad con la que al hacer clic sobre la tarjeta de un personaje, su información aparecerá a pantalla completa usando rutas dinámicas.
 
-### `yarn test`
+Componentes del listado de personajes
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+src
+├─ components
+| ├─ App.js
+| ├─ Card.js
+| ├─ CharacterDetail.js
+| ├─ CharacternotFound.js
+| ├─ CharacterList.js
+| ├─ FilterName.js
+| ├─ Filters.js
+| └─ FiltSpecies.js
+|
+├─ imge
+| └─ logo.png
+├─ imge
+| └─ Api.js  
+| └─ local-storage.js
+|
+├─ stylesheets
+| └─ ...
+|
+└─ index.js
+En la pantalla de detalle aparecerá además de la foto, nombre y especie, el planeta de origen, el número de episodios en los que aparece y si está vivo o muerto.
 
-### `yarn build`
+## Tecnologías:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+React / JS / SCSS
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## ARRANQUE EN LOCAL
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Clona este repositorio en tu equipo.
 
-### `yarn eject`
+Realiza la instalación del paquete y sus dependencias mediante:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Realiza la instalación del paquete y sus dependencias mediante:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### npm install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Una vez finalizada la instalación encontrarás que se ha añadido una carpeta denominada node_modules/.
+Por último, ejecuta el siguiente comando para que cargue un servidor local y poder hacer la visualización:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### npm start
 
-## Learn More
+### NOTA: Es necesario tener instalado NodeJS
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## ¿Consideras que puedo aplicar alguna mejora?
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Si has llegado hasta aqui, y has detectado un problema o consideras que alguna cosa puede mejorarse, estaría encantada de que abras un nuevo issue y conocer tu opinión, cada mejora es importante y necesaria para mi, muchas gracias por tu tiempo.

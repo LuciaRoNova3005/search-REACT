@@ -1,0 +1,17 @@
+.characterNotFound {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  &__img {
+    width: 500px;
+    margin: auto;
+  }
+}
+.tittle3 {
+  color: rgb(0, 176, 199);
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}

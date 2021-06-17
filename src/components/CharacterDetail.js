@@ -11,7 +11,7 @@ const CharacterDetail = (props) => {
     }
   };
   return (
-    <div>
+    <div className="carhacterDetail">
       <Link to="/" className="link">
         Volver
       </Link>

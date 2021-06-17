@@ -1,9 +1,18 @@
+.carhacterDetail {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
 .detail {
   margin: 40px;
+  text-align: center;
+
   &__img {
     border: 4px solid #a8cb50;
     width: 200px;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
   }
   &__title2 {
     margin-bottom: 5px;
@@ -16,6 +25,18 @@
     &__text {
       margin-top: 10px;
       font-weight: bold;
+      color: rgb(102, 233, 250);
     }
   }
+}
+.link {
+  margin: auto;
+  color: #a8cb50;
+  font-size: 22px;
+}
+
+a:hover {
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
 }

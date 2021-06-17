@@ -7,7 +7,7 @@ const FilterSpecie = (props) => {
     });
   };
   return (
-    <div className="">
+    <div className="form__container">
       <label className="form__specie" htmlFor="specie">
         Especie
       </label>

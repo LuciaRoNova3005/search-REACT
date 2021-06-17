@@ -1,10 +1,21 @@
 .form {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
-  align-items: center;
   margin: 50px;
-
+  @include tablet {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  @include desktop {
+    justify-content: space-evenly;
+  }
+  &__container {
+    text-align: center;
+    justify-content: center;
+    margin: 10px;
+  }
   &__name {
     color: white;
     text-align: center;
@@ -15,6 +26,9 @@
     font-family: "Roboto", sans-serif;
     color: rgb(0, 176, 199);
     padding: 10px;
+    @include tablet {
+      width: 300px;
+    }
   }
   &__specie {
     font-family: "Roboto", sans-serif;
@@ -29,15 +43,18 @@
   }
   &__types {
     align-items: center;
-    justify-content: center;
-    text-align: center;
+    justify-content: space-between;
     height: 40px;
     border-radius: 5px;
     padding: 10px;
     font-family: "Roboto", sans-serif;
     font-size: 14px;
     color: rgb(0, 176, 199);
+
     font-weight: bold;
+    @include tablet {
+      width: 200px;
+    }
   }
 }
 .reset_buttton {
@@ -51,4 +68,8 @@
   font-size: 14px;
   color: rgb(0, 176, 199);
   font-weight: bold;
+  @include tablet {
+    width: 150px;
+    margin-left: 30px;
+  }
 }

@@ -1,9 +1,7 @@
 .form {
   display: flex;
   flex-direction: column;
-  background-color: red;
-  margin-left: 30px;
-  margin-right: 30px;
+  margin: 10px 30px 20px 30px;
 
   @include tablet {
     flex-direction: row;
@@ -29,6 +27,7 @@
     font-family: "Roboto", sans-serif;
     color: rgb(0, 176, 199);
     padding: 10px;
+
     @include tablet {
       width: 300px;
     }

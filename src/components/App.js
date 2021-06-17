@@ -102,6 +102,14 @@ const App = () => {
           <Route path="/character/:Id" render={renderCharacterDetail} />
         </Switch>
       </main>
+      <footer className="footer">
+        <small> Lucía Rodríguez Nova </small>
+        <img
+          className="img__logo"
+          src="./rickandmorty.ico"
+          alt="Logo Rick and morty"
+        ></img>
+      </footer>
     </>
   );
 };

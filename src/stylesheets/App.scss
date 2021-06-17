@@ -10,10 +10,28 @@
 .logo {
   text-align: center;
   margin: auto;
-  width: 250px;
+  width: 300px;
   padding-top: 30px;
 
   @include tablet {
     width: 622px;
   }
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: auto;
+  padding-right: 30px;
+  padding-bottom: 10px;
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+.img__logo {
+  width: 70px;
 }

@@ -4,10 +4,12 @@ import { Link } from "react-router-dom";
 const CharacterDetail = (props) => {
   const getStatus = () => {
     const speciesStatus = props.character.status;
-    if (speciesStatus === "Alive") {
+    if (speciesStatus === "Dead") {
+      return "fas fa-skull-crossbones";
+    } else if (speciesStatus === "Alive") {
       return "fas fa-thumbs-up";
     } else {
-      return "fas fa-skull-crossbones";
+      return "fas fa-question";
     }
   };
   return (

@@ -84,7 +84,7 @@ const App = () => {
       <header>
         <h1 className="logo">
           <Link to="/">
-            <img src={Logo} alt="Logo Rick and morty"></img>
+            <img className="logo" src={Logo} alt="Logo Rick and morty"></img>
           </Link>
         </h1>
       </header>

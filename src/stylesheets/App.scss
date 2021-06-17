@@ -1,10 +1,15 @@
 @import "../stylesheets/Core/reset.scss";
+@import "../stylesheets/Core/mixin.scss";
 @import "../stylesheets/Componentes/filter.scss";
 @import "../stylesheets/Componentes/CardList.scss";
 @import "../stylesheets/Componentes/CardDetail.scss";
 @import "../stylesheets/Componentes/CharacternotFound.scss";
 .logo {
-  margin: auto;
-  padding-top: 30px;
   text-align: center;
+  margin: auto;
+  width: 250px;
+  padding-top: 30px;
+  @include tablet {
+    width: 622px;
+  }
 }

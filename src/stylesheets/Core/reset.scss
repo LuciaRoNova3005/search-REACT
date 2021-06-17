@@ -17,3 +17,14 @@ body {
   outline: none;
   box-sizing: border-box;
 }
+.link {
+  margin: auto;
+  color: #a8cb50;
+  margin-left: 40px;
+}
+
+a:hover {
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+}

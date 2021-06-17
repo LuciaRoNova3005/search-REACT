@@ -4,7 +4,51 @@
   justify-content: space-around;
   align-items: center;
   margin: 50px;
+
+  &__name {
+    color: white;
+    text-align: center;
+    border: solid 4px #a8cb50;
+    height: 40px;
+    border-radius: 5px;
+    color: rgb(0, 176, 199);
+    font-family: "Roboto", sans-serif;
+    color: rgb(0, 176, 199);
+    padding: 10px;
+  }
+  &__specie {
+    font-family: "Roboto", sans-serif;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 40px;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  &__types {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 40px;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    color: rgb(0, 176, 199);
+    font-weight: bold;
+  }
 }
-.form__name {
-  color: white;
+.reset_buttton {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 40px;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  color: rgb(0, 176, 199);
+  font-weight: bold;
 }

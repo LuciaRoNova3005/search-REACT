@@ -12,12 +12,16 @@ function Card(props) {
   };
 
   return (
-    <article className="card">
-      <img src={props.img} alt={props.name} className="" />
-      <h2 className="">{props.name}</h2>
+    <article className="cardSingle">
+      <img className="imgCard" src={props.img} alt={props.name} />
+      <h2 className="cardTittle">{props.name}</h2>
       <i className={`${getSpecies()}`}></i>
       {props.species}
-      <Link to={`/character/${props.id}`}>Más información </Link>
+      <div className="information">
+        <Link className="link" to={`/character/${props.id}`}>
+          Más información{" "}
+        </Link>
+      </div>
     </article>
   );
 }

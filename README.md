@@ -18,7 +18,7 @@ Filtrado de personajes
 
 Detalle de personajes Implementamos la funcionalidad con la que al hacer clic sobre la tarjeta de un personaje, su información aparecerá a pantalla completa usando rutas dinámicas.
 
-## FUncionalidades Extra
+## Funcionalidades Extra
 La URL del detalle de personaje sea compartible, es decir, que si visitamos esa URL directamente en el navegador se vea el detalle del personaje. Si refescamos el navegador en el detalle de un personaje debe volver a mostrar el detalle del personaje.
 Y en el caso de que el usuario navegue a una URL inexistente como por ejemplo debemos mostrar un mensaje del tipo "El personaje que buscas no existe"
 

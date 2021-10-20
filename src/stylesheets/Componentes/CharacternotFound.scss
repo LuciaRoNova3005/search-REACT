@@ -17,7 +17,10 @@
 }
 .tittle3 {
   color: rgb(0, 176, 199);
-  font-size: 24px;
+  font-size: 12px;
   font-weight: bold;
   margin-bottom: 30px;
+  @include tablet {
+    font-size: 24px;
+  }
 }

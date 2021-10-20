@@ -5,8 +5,14 @@
   text-align: center;
 
   &__img {
-    width: 500px;
+    width: 300px;
     margin: auto;
+    @include tablet {
+      width: 500px;
+    }
+    @include desktop {
+      width: 500px;
+    }
   }
 }
 .tittle3 {

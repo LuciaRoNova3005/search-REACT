@@ -7,7 +7,7 @@ const CharacterDetail = (props) => {
     if (speciesStatus === "Dead") {
       return "fas fa-skull-crossbones";
     } else if (speciesStatus === "Alive") {
-      return "fas fa-thumbs-up";
+      return "fas fa-heart";
     } else {
       return "fas fa-question";
     }

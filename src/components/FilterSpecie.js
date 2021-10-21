@@ -9,7 +9,7 @@ const FilterSpecie = (props) => {
   return (
     <div className="form__container">
       <label className="form__specie" htmlFor="specie">
-        Especie
+        Tipo de especie
       </label>
       <select
         className="form__types"
@@ -18,7 +18,7 @@ const FilterSpecie = (props) => {
         onChange={handleChange}
         value={props.filterSpecies}
       >
-        <option value="">Todos los tipos</option>
+        <option value="">Todas</option>
         <option value="Human">Humano</option>
         <option value="Alien">Alienígena</option>
       </select>

@@ -52,7 +52,7 @@
     height: 40px;
     border-radius: 5px;
     padding: 10px;
-    font-size: 20px;
+
     font-weight: bold;
     @include desktop {
       font-size: 20px;
@@ -69,6 +69,7 @@
     font-size: 14px;
     color: rgb(0, 176, 199);
     font-weight: bold;
+    text-align: center;
     @include tablet {
       width: 200px;
     }

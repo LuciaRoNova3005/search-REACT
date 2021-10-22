@@ -15,7 +15,7 @@ const Filters = (props) => {
         ></FilterName>
         <FilterSpecie
           handleFilter={props.handleFilter}
-          value={props.filterSpecies}
+          filterSpecies={props.filterSpecies}
         ></FilterSpecie>
         <button className="reset_buttton" onClick={props.handleReset}>
           <i className="far fa-trash-alt"></i> Reset

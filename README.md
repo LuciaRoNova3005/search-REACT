@@ -57,8 +57,6 @@ React / JS / SCSS
 
 Realiza la instalación del paquete y sus dependencias mediante:
 
-Realiza la instalación del paquete y sus dependencias mediante:
-
 ### npm install
 
 Una vez finalizada la instalación encontrarás que se ha añadido una carpeta denominada node_modules/.

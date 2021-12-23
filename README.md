@@ -12,7 +12,7 @@ The exercise consists of developing a web page with a list of Rick and Morty cha
 4. [Character detail](##Character-detail)
 
 
-### 1. Data structure
+### 1. Data Structure
 ```
 src
 ├─ components
@@ -40,7 +40,7 @@ src
 
 ---
 
- ### 2. List of characters]
+ ### 2. List of Characters]
 We will use the service  https://rickandmortyapi.com/documentation/#get-all-characters <br>
 [API](https://rickandmortyapi.com/documentation/#get-all-characters
 Photo <br>
@@ -48,7 +48,7 @@ Name <br>
 Species <br>
 Character filtering
 
-  ### 3. Character filtering
+  ### 3. Character Filtering
 
 Now that we have the list of characters on the screen, the second part consists of being able to search for them by name. To do this, we add an `input` to the interface, so that when we write a name, only the characters whose name contains the written letters remain in the interface.
 
@@ -58,7 +58,7 @@ In addition, the user must filter by type of species
 
 > **NOTE:** The filter must filter regardless of whether the user enters the text in uppercase or lowercase.
 
-## 4. Character detail <br>
+## 4. Character Detail <br>
 ![image](https://user-images.githubusercontent.com/81588630/139125044-544127de-7ea7-46e3-90ac-ed8265ada4aa.png)<br>
 We implemented the functionality with which when clicking on a character's card, its information will appear in full screen using dynamic routes.
 
@@ -66,7 +66,7 @@ We implemented the functionality with which when clicking on a character's card,
 
 In the detail screen it will appear in addition to the photo, name and species, the planet of origin, the number of episodes in which it appears and if it is alive or dead.
 
-## Funcionalidades Extra
+## Extra Functionalities
 The URL of the character detail is shareable, that is, if we visit that URL directly in the browser, the character detail will be seen. <br> If we refresh the browser in the detail of a character, it should show the detail of the character again.<br>
 And in the event that the user navigates to a non-existent URL, such as for example, we must show a message such as "The character you are looking for does not exist."
 

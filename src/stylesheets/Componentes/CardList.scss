@@ -1,33 +1,32 @@
 .card {
   text-align: center;
-  background-color: darkgray;
-  margin: auto;
-  padding: 20px;
-  border-radius: 80%;
+  background-color: #4b4b4b;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 60px;
+  justify-content: space-between;
+  @include tablet {
+    margin: auto;
+    padding: 20px;
+  }
 }
+
 .card-list {
   display: grid;
   grid-template-columns: 1fr;
   grid-auto-rows: min-content;
   grid-gap: 5px;
-  margin: 5px;
   @include tablet {
     grid-template-columns: 1fr 1fr;
-    margin: 5px;
   }
   @include desktop {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 30px;
   }
 }
-.cardTittle {
-  margin: 10px;
-}
-.information {
-  padding: 15px;
-}
+
 .imgCard {
-  margin-top: 20px;
+  margin: auto;
   border: 4px solid #a8cb50;
   border-radius: 30px;
 }

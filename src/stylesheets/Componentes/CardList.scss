@@ -1,17 +1,4 @@
-.card {
-  text-align: center;
-  background-color: #4b4b4b;
-  margin-top: 20px;
-  padding: 10px;
-  border-radius: 60px;
-  justify-content: space-between;
-  @include tablet {
-    margin: auto;
-    padding: 20px;
-  }
-}
-
-.card-list {
+.list {
   display: grid;
   grid-template-columns: 1fr;
   grid-auto-rows: min-content;
@@ -23,13 +10,26 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 30px;
   }
+  &__card {
+    text-align: center;
+    background-color: #4b4b4b;
+    margin-top: 20px;
+    padding: 10px;
+    padding-top: 30px;
+    border-radius: 60px;
+    justify-content: space-between;
+    @include tablet {
+      margin: auto;
+      padding: 20px;
+    }
+    &__img {
+      margin: auto;
+      border: 4px solid #a8cb50;
+      border-radius: 30px;
+    }
+  }
 }
 
-.imgCard {
-  margin: auto;
-  border: 4px solid #a8cb50;
-  border-radius: 30px;
-}
 .fa-user-alt {
   margin-right: 5px;
 }

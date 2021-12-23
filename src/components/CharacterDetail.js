@@ -26,7 +26,8 @@ const CharacterDetail = (props) => {
         <h2 className="detail__title2">{props.character.name}</h2>
         <ul className="detail__inform">
           <li className="detail__inform__text">
-            <i className={`icon ${getStatus()}`}> {props.character.status}</i>
+            <i className={`icon ${getStatus()}`}> </i>
+            {props.character.status}
           </li>
           <li className="detail__inform__text">
             Origen: {props.character.origin}

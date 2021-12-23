@@ -13,7 +13,7 @@ function Card(props) {
 
   return (
     <article className="cardSingle">
-      <img className="imgCard" src={props.img} alt={props.name} />
+      <img className="list__card__img" src={props.img} alt={props.name} />
       <h2 className="cardTittle">{props.name}</h2>
       <i className={`${getSpecies()}`}></i>
       {props.species}

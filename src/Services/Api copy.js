@@ -1,6 +1,6 @@
 const getApiData = () => {
   return (
-    fetch("https://rickandmortyapi.com/api/character/")
+    fetch("https://rickandmortyapi.com/api/character/?page=3")
       /*Hay que retornar el fecth para que no salga undefined
        */
       .then((response) => response.json())

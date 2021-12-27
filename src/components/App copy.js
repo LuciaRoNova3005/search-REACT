@@ -3,21 +3,14 @@ import React, { useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 import Logo from "../img/Logo.png";
 import ls from "../Services/local-storage";
+import getApiData from "../Services/Api";
 import CharactersList from "../components/CharactersList";
 import Filters from "./Filters";
 import CharacterDetail from "./CharacterDetail";
 import CharacterNotFound from "./CharacternotFound";
 import { Link } from "react-router-dom";
-import Pagination from "./Pagination";
 
 const App = () => {
-  const [loading, setLoading] = useState(true);
-  const [currentPageUrl, setCurrentPageUrl] = useState(
-    "https://rickandmortyapi.com/api/character?"
-  );
-  const [nextPageUrl, setNextPageUrl] = useState();
-  const [prevPageUrl, setPrevPageUrl] = useState();
-  const [pages, setPages] = useState();
   /*Un array vacío para definir el estado inicial
    pasa una key y un valor defaulft*/
   const [characters, setcharacters] = useState(ls.get("characters", []));
@@ -25,13 +18,6 @@ const App = () => {
   const [filterSpecies, setFilterSpecies] = useState(
     ls.get("filterSpecies", "")
   );
-  useEffect(() => {
-    ls.set("character", characters);
-    ls.set("filterName", filterName);
-    ls.set("filterSpecies", filterSpecies);
-  }, [characters, filterName, filterSpecies]);
-
-  /*Este Useeffect se ejecuta cuando characters cambia y lo guarda en local*/
   /* Reset */
   const handleReset = () => {
     setFilterName("");
@@ -53,43 +39,24 @@ const App = () => {
 
   /*Empieza ejecutarse en la parte de montaje y es lo que hace que salga los datos
    */
-  // useEffect(() => {
-  //   /*Si el array esta vacío no accedes al locastorage
-  //    */
-  //   if (characters.length === 0) {
-  //     getApiData().then((charactersData) => {
-  //       setcharacters(charactersData);
-  //     });
-  //   }
-  // }, []);
+  useEffect(() => {
+    /*Si el array esta vacío no accedes al locastorage
+     */
+    if (characters.length === 0) {
+      getApiData().then((charactersData) => {
+        setcharacters(charactersData);
+      });
+    }
+  }, []);
   /*Parámetro que nos indica cuando debe ejecutarse el useEffect
    */
+
   useEffect(() => {
-    const url = currentPageUrl;
-    setLoading(true);
-    const fetchData = async () => {
-      const res = await fetch(url);
-      const data = await res.json();
-      setcharacters(data.results);
-      setLoading(false);
-      setNextPageUrl(data.info.next);
-      setPrevPageUrl(data.info.prev);
-      setPages(data.info.pages);
-    };
-    fetchData();
-  }, [currentPageUrl]);
-
-  function nextPage() {
-    setCurrentPageUrl(nextPageUrl);
-  }
-
-  function prevPage() {
-    setCurrentPageUrl(prevPageUrl);
-  }
-
-  function goToPage(num) {
-    setCurrentPageUrl(`https://rickandmortyapi.com/api/character?page=${num}`);
-  }
+    ls.set("character", characters);
+    ls.set("filterName", filterName);
+    ls.set("filterSpecies", filterSpecies);
+  }, [characters, filterName, filterSpecies]);
+  /*Este Useeffect se ejecuta cuando characters cambia y lo guarda en local*/
 
   const handleFilter = (data) => {
     if (data.key === "name") {
@@ -112,7 +79,6 @@ const App = () => {
       }
     });
 
-  if (loading) return "Loading...";
   return (
     <>
       <header className="header">
@@ -131,17 +97,10 @@ const App = () => {
               filterName={filterName}
               filterSpecies={filterSpecies}
             ></Filters>
-
             <CharactersList characters={filtercharacters}></CharactersList>
           </Route>
           <Route path="/character/:Id" render={renderCharacterDetail} />
         </Switch>
-        <Pagination
-          nextPage={nextPageUrl ? nextPage : null}
-          prevPage={prevPageUrl ? prevPage : null}
-          goToPage={goToPage}
-          pages={pages}
-        />
       </main>
       <footer className="footer">
         <small> Lucía Rodríguez Nova </small>

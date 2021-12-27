@@ -4,15 +4,15 @@ The exercise consists of developing a web page with a list of Rick and Morty cha
 
 ![image](https://user-images.githubusercontent.com/81588630/139122729-965e29e9-38ce-46ee-9598-3762e7b119be.png)
 
-### INDICE
+### INDEX
 
-1. [Data structure](##Data-structure)
-2. [List of characters](##List-of-characters)
-3. [Character filtering](##Character-filtering)
-4. [Character detail](##Character-detail)
-
+1. [Data structure](#Data-structure)
+2. [List of characters](#List-of-characters)
+3. [Character filtering](#Character-filtering)
+4. [Character detail](#Character-detail)
 
 ### 1. Data Structure
+
 ```
 src
 ├─ components
@@ -28,7 +28,7 @@ src
 ├─ imge
 | └─ logo.png
 ├─ imge
-| └─ Api.js  
+| └─ Api.js
 | └─ local-storage.js
 |
 ├─ stylesheets
@@ -40,15 +40,16 @@ src
 
 ---
 
- ### 2. List of Characters]
-We will use the service  https://rickandmortyapi.com/documentation/#get-all-characters <br>
+### 2. List of Characters]
+
+We will use the service https://rickandmortyapi.com/documentation/#get-all-characters <br>
 [API](https://rickandmortyapi.com/documentation/#get-all-characters
 Photo <br>
 Name <br>
 Species <br>
 Character filtering
 
-  ### 3. Character Filtering
+### 3. Character Filtering
 
 Now that we have the list of characters on the screen, the second part consists of being able to search for them by name. To do this, we add an `input` to the interface, so that when we write a name, only the characters whose name contains the written letters remain in the interface.
 
@@ -59,14 +60,16 @@ In addition, the user must filter by type of species
 > **NOTE:** The filter must filter regardless of whether the user enters the text in uppercase or lowercase.
 
 ## 4. Character Detail <br>
+
 ![image](https://user-images.githubusercontent.com/81588630/139125044-544127de-7ea7-46e3-90ac-ed8265ada4aa.png)<br>
 We implemented the functionality with which when clicking on a character's card, its information will appear in full screen using dynamic routes.
 
->**NOTE:** If we search for a text for example "XXX" and there is no character that matches that text, an error message is displayed that says: _ "There is no character that matches your search<br>
+> **NOTE:** If we search for a text for example "XXX" and there is no character that matches that text, an error message is displayed that says: \_ "There is no character that matches your search<br>
 
 In the detail screen it will appear in addition to the photo, name and species, the planet of origin, the number of episodes in which it appears and if it is alive or dead.
 
 ## Extra Functionalities
+
 The URL of the character detail is shareable, that is, if we visit that URL directly in the browser, the character detail will be seen. <br> If we refresh the browser in the detail of a character, it should show the detail of the character again.<br>
 And in the event that the user navigates to a non-existent URL, such as for example, we must show a message such as "The character you are looking for does not exist."
 
@@ -74,18 +77,19 @@ And in the event that the user navigates to a non-existent URL, such as for exam
 
 #### BONUS: a reset button has been added that eliminates the searches included in the localstorage
 
-####  BONUS: Usar algún sistema de grid para pintar el listado de personajes.
+#### BONUS: Usar algún sistema de grid para pintar el listado de personajes.
 
 #### BONUS: Use a grid system to paint the list of characters. ARRANQUE EN LOCAL
 
 #### EXTRA: We save and collect the data at the LocalStorage to keep the last search we have made.
 
 ---
-## Technologies: 
+
+## Technologies:
 
 React / JS / SCSS
 
-## ARRANQUE EN LOCAL
+## STAR IN LOCAL
 
 ### Clone this repository on your computer.
 
@@ -99,11 +103,12 @@ Finally, run the following command to load a local server and be able to do the 
 ### npm start
 
 ### `npm run build`
+
 Build the production app in the `build` folder. \ <br>
 Correctly bundles React in production mode and optimizes build for best performance.
 
 ### NOTE: It is necessary to have NodeJS installed
 
 ## Do you think I can apply any improvement?
-If you have come this far, and you have detected a problem or consider that something can be improved, I would be delighted if you open a new issue and get your opinion, each improvement is important and necessary for me, thank you very much for your time.
 
+If you have come this far, and you have detected a problem or consider that something can be improved, I would be delighted if you open a new issue and get your opinion, each improvement is important and necessary for me, thank you very much for your time.

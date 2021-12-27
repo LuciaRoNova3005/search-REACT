@@ -27,7 +27,8 @@ src
 |
 ├─ imge
 | └─ logo.png
-├─ imge
+|
+├─ Services
 | └─ Api.js
 | └─ local-storage.js
 |
@@ -37,8 +38,6 @@ src
 └─ index.js
 
 ```
-
----
 
 ### 2. List of Characters]
 

@@ -157,7 +157,6 @@ const App = () => {
           nextPage={nextPageUrl ? nextPage : null}
           prevPage={prevPageUrl ? prevPage : null}
           goToPage={goToPage}
-          pages={pages}
         />
       </main>
       <footer className="footer">

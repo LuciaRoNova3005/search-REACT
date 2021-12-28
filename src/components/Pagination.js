@@ -9,11 +9,16 @@ const Pagination = ({ nextPage, prevPage, goToPage, pages }) => {
       </button>
     );
   }
+
   return (
     <div className="pagination">
-      <button onClick={prevPage}>Previous</button>
+      <button className="pagination__button" onClick={prevPage}>
+        Previous
+      </button>
 
-      <button onClick={nextPage}>Next</button>
+      <button className="pagination__button" onClick={nextPage}>
+        Next
+      </button>
     </div>
   );
 };

@@ -15,6 +15,7 @@ const CharacterDetail = (props) => {
   return (
     <div className="carhacterDetail">
       <Link to="/" className="link">
+        <i className="icon fas fa-chevron-left"></i>
         Volver
       </Link>
       <section className="detail">

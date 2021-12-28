@@ -53,24 +53,28 @@ const App = () => {
 
   /*Empieza ejecutarse en la parte de montaje y es lo que hace que salga los datos
    */
-  // useEffect(() => {
-  //   /*Si el array esta vacío no accedes al locastorage
-  //    */
-  //   if (characters.length === 0) {
-  //     getApiData().then((charactersData) => {
-  //       setcharacters(charactersData);
-  //     });
-  //   }
-  // }, []);
-  /*Parámetro que nos indica cuando debe ejecutarse el useEffect
-   */
+
   useEffect(() => {
     const url = currentPageUrl;
     setLoading(true);
     const fetchData = async () => {
       const res = await fetch(url);
       const data = await res.json();
-      setcharacters(data.results);
+      const orderResults = data.results.sort((a, b) =>
+        a.name > b.name ? 1 : a.name < b.name ? -1 : 0
+      );
+      const cleanData = orderResults.map((character) => {
+        return {
+          id: character.id,
+          img: character.image,
+          name: character.name,
+          species: character.species,
+          status: character.status,
+          origin: character.origin.name,
+          episode: character.episode.length,
+        };
+      });
+      setcharacters(cleanData);
       setLoading(false);
       setNextPageUrl(data.info.next);
       setPrevPageUrl(data.info.prev);

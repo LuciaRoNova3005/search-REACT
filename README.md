@@ -70,7 +70,10 @@ In the detail screen it will appear in addition to the photo, name and species, 
 
 ## 5. Pagination <br>
 
-You can also go through the pages with the different results
+You can also go through the pages with the different results.
+
+![image](https://user-images.githubusercontent.com/81588630/147592667-01755c9d-9aec-466e-8174-913ea777e5c0.png)<br>
+
 
 ## Extra Functionalities
 

@@ -13,13 +13,13 @@ const Pagination = ({ nextPage, prevPage, goToPage, pages }) => {
   return (
     <div className="pagination">
       <button className="pagination__button" onClick={prevPage}>
+        <i className="icon fas fa-arrow-left"></i>
         Previous
-        <i class="fas fa-arrow-left"></i>
       </button>
 
       <button className="pagination__button" onClick={nextPage}>
-        <i class="fas fa-arrow-right"></i>
         Next
+        <i className="icon fas fa-arrow-right"></i>
       </button>
     </div>
   );

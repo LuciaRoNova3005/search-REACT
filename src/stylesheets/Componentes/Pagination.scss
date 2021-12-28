@@ -7,12 +7,16 @@
   &__button {
     color: black;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 16px;
     border-radius: 10px;
     padding: 10px;
     border: solid 4px #a8cb50;
     font-family: "Ubuntu", sans-serif;
     text-align: center;
+    @include tablet {
+      font-size: 22px;
+    }
+
     &:hover {
       font-size: 28px;
       font-weight: bold;

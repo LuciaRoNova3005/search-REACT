@@ -44,8 +44,6 @@ const App = () => {
     filterSpecies,
   ]);
 
-  /*Este Useeffect se ejecuta cuando characters cambia y lo guarda en local*/
-  /* Reset */
   const handleReset = () => {
     setFilterName("");
     setFilterSpecies("");
@@ -150,14 +148,14 @@ const App = () => {
             ></Filters>
 
             <CharactersList characters={filtercharacters}></CharactersList>
+            <Pagination
+              nextPage={nextPageUrl ? nextPage : null}
+              prevPage={prevPageUrl ? prevPage : null}
+              goToPage={goToPage}
+            />
           </Route>
           <Route path="/character/:Id" render={renderCharacterDetail} />
         </Switch>
-        <Pagination
-          nextPage={nextPageUrl ? nextPage : null}
-          prevPage={prevPageUrl ? prevPage : null}
-          goToPage={goToPage}
-        />
       </main>
       <footer className="footer">
         <small> Lucía Rodríguez Nova </small>

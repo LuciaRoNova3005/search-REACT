@@ -12,12 +12,15 @@ import Pagination from "./Pagination";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
+  // const [currentPageUrl, setCurrentPageUrl] = useState(
+  //   "https://rickandmortyapi.com/api/character?"
+  // );
   const [currentPageUrl, setCurrentPageUrl] = useState(
-    "https://rickandmortyapi.com/api/character?"
+    ls.get("currentPageUrl", "https://rickandmortyapi.com/api/character?")
   );
-  const [nextPageUrl, setNextPageUrl] = useState();
-  const [prevPageUrl, setPrevPageUrl] = useState();
-  const [pages, setPages] = useState();
+  const [nextPageUrl, setNextPageUrl] = useState(ls.get("nextPageUrl", []));
+  const [prevPageUrl, setPrevPageUrl] = useState(ls.get("prevPageUrl", []));
+  const [pages, setPages] = useState(ls.get("pages", []));
   /*Un array vacío para definir el estado inicial
    pasa una key y un valor defaulft*/
   const [characters, setcharacters] = useState(ls.get("characters", []));
@@ -26,10 +29,22 @@ const App = () => {
     ls.get("filterSpecies", "")
   );
   useEffect(() => {
+    ls.set("pages", pages);
+    ls.set("currentPageUrl", currentPageUrl);
+    ls.set("nextPageUrl", nextPageUrl);
+    ls.set("prevPageUrl", prevPageUrl);
     ls.set("character", characters);
     ls.set("filterName", filterName);
     ls.set("filterSpecies", filterSpecies);
-  }, [characters, filterName, filterSpecies]);
+  }, [
+    currentPageUrl,
+    prevPageUrl,
+    nextPageUrl,
+    pages,
+    characters,
+    filterName,
+    filterSpecies,
+  ]);
 
   /*Este Useeffect se ejecuta cuando characters cambia y lo guarda en local*/
   /* Reset */

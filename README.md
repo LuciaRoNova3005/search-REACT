@@ -10,6 +10,7 @@ The exercise consists of developing a web page with a list of Rick and Morty cha
 2. [List of characters](#List-of-characters)
 3. [Character filtering](#Character-filtering)
 4. [Character detail](#Character-detail)
+5. [Pagination](#Pagination)
 
 ### 1. Data Structure
 
@@ -24,12 +25,12 @@ src
 | ├─ FilterName.js
 | ├─ Filters.js
 | └─ FiltSpecies.js
+| └─ Pagination.js
 |
 ├─ imge
 | └─ logo.png
 |
 ├─ Services
-| └─ Api.js
 | └─ local-storage.js
 |
 ├─ stylesheets
@@ -66,6 +67,10 @@ We implemented the functionality with which when clicking on a character's card,
 > **NOTE:** If we search for a text for example "XXX" and there is no character that matches that text, an error message is displayed that says: \_ "There is no character that matches your search<br>
 
 In the detail screen it will appear in addition to the photo, name and species, the planet of origin, the number of episodes in which it appears and if it is alive or dead.
+
+## 5. Pagination <br>
+
+You can also go through the pages with the different results
 
 ## Extra Functionalities
 

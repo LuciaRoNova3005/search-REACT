@@ -12,9 +12,7 @@ import Pagination from "./Pagination";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
-  // const [currentPageUrl, setCurrentPageUrl] = useState(
-  //   "https://rickandmortyapi.com/api/character?"
-  // );
+
   const [currentPageUrl, setCurrentPageUrl] = useState(
     ls.get("currentPageUrl", "https://rickandmortyapi.com/api/character?")
   );

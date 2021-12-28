@@ -4,6 +4,7 @@
 @import "../stylesheets/Componentes/CardList.scss";
 @import "../stylesheets/Componentes/CardDetail.scss";
 @import "../stylesheets/Componentes/CharacternotFound.scss";
+@import "../stylesheets/Componentes/Pagination.scss";
 .header {
   margin: auto;
 }
@@ -42,7 +43,4 @@
   @include tablet {
     width: 70px;
   }
-}
-.test {
-  background-color: red;
 }

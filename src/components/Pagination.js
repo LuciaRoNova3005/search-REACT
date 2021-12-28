@@ -14,9 +14,11 @@ const Pagination = ({ nextPage, prevPage, goToPage, pages }) => {
     <div className="pagination">
       <button className="pagination__button" onClick={prevPage}>
         Previous
+        <i class="fas fa-arrow-left"></i>
       </button>
 
       <button className="pagination__button" onClick={nextPage}>
+        <i class="fas fa-arrow-right"></i>
         Next
       </button>
     </div>

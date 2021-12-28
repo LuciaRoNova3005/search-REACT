@@ -25,7 +25,7 @@ function Card(props) {
       {props.species}
       <div className="information">
         <Link className="link" to={`/character/${props.id}`}>
-          Más información{" "}
+          Más información <i className="icon fas fa-chevron-right"></i>
         </Link>
       </div>
     </article>

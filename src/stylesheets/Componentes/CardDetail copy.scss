@@ -6,7 +6,6 @@
     font-size: 27px;
   }
 }
-
 a:hover {
   font-size: 28px;
   font-weight: bold;
@@ -14,24 +13,23 @@ a:hover {
     font-size: 36px;
   }
 }
-.icon {
-  margin: 5px;
-  @include tablet {
-    font-size: 27px;
-  }
-}
 .carhacterDetail {
   margin: auto;
   display: flex;
   flex-direction: column;
   text-align: center;
+
+  background-color: #4b4b4b;
+  padding: 10px;
+  border-radius: 60px;
 }
 
 .detail {
   text-align: center;
   justify-content: center;
+  background-color: red;
   margin: auto;
-  padding: 10px;
+
   &__img {
     border: 4px solid #a8cb50;
     width: 200px;
@@ -57,5 +55,11 @@ a:hover {
         font-size: 27px;
       }
     }
+  }
+}
+.icon {
+  margin: 5px;
+  @include tablet {
+    font-size: 27px;
   }
 }

@@ -92,11 +92,10 @@ And in the event that the user navigates to a non-existent URL, such as for exam
 
 ---
 
-## Technologies:
-
+##  🛠️Technologies <br> 
 React / JS / SCSS
 
-## STAR IN LOCAL
+## STAR IN LOCAL 🚀
 
 ### Clone this repository on your computer.
 

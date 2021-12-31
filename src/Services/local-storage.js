@@ -3,11 +3,7 @@
 
 const get = (key, defaultData) => {
   const data = localStorage.getItem(key);
-  if (
-    data === null
-    /*no tienes datos
-      me devuelves los predefinido en este caso un array vacio */
-  ) {
+  if (data === null) {
     return defaultData;
   } else {
     return JSON.parse(data);

@@ -4,7 +4,7 @@ The exercise consists of developing a web page with a list of Rick and Morty cha
 
 ![image](https://user-images.githubusercontent.com/81588630/139122729-965e29e9-38ce-46ee-9598-3762e7b119be.png)
 
-### INDEX
+### INDEX 📋
 
 1. [Data structure](#Data-structure)
 2. [List of characters](#List-of-characters)

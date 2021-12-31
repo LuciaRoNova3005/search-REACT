@@ -84,9 +84,7 @@ And in the event that the user navigates to a non-existent URL, such as for exam
 
 #### BONUS: a reset button has been added that eliminates the searches included in the localstorage
 
-#### BONUS: Usar algún sistema de grid para pintar el listado de personajes.
-
-#### BONUS: Use a grid system to paint the list of characters. ARRANQUE EN LOCAL
+#### BONUS: Use a grid system to paint the list of characters. 
 
 #### EXTRA: We save and collect the data at the LocalStorage to keep the last search we have made.
 

@@ -110,7 +110,7 @@ Finally, run the following command to load a local server and be able to do the 
 
 ### `npm run build`
 
-Build the production app in the `build` folder. \ <br>
+Build the production app in the `build` folder.<br>
 Correctly bundles React in production mode and optimizes build for best performance.
 
 ### NOTE: It is necessary to have NodeJS installed

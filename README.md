@@ -40,7 +40,7 @@ src
 
 ```
 
-### 2. List of Characters]
+### 2. List of Characters
 
 We will use the service https://rickandmortyapi.com/documentation/#get-all-characters <br>
 [API](https://rickandmortyapi.com/documentation/#get-all-characters

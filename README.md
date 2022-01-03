@@ -12,7 +12,7 @@ The exercise consists of developing a web page with a list of Rick and Morty cha
 4. [Character detail](#Character-detail)
 5. [Pagination](#Pagination)
 
-### 1. Data Structure
+## 1. Data Structure
 
 ```
 src
@@ -40,7 +40,7 @@ src
 
 ```
 
-### 2. List of Characters
+## 2. List of Characters
 
 We will use the service https://rickandmortyapi.com/documentation/#get-all-characters <br>
 [API](https://rickandmortyapi.com/documentation/#get-all-characters
@@ -49,7 +49,7 @@ Name <br>
 Species <br>
 Character filtering
 
-### 3. Character Filtering
+## 3. Character Filtering
 
 Now that we have the list of characters on the screen, the second part consists of being able to search for them by name. To do this, we add an `input` to the interface, so that when we write a name, only the characters whose name contains the written letters remain in the interface.
 

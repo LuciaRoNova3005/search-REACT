@@ -86,7 +86,7 @@ And in the event that the user navigates to a non-existent URL, such as for exam
 
 #### BONUS: Use a grid system to paint the list of characters. 
 
-#### EXTRA: We save and collect the data at the LocalStorage to keep the last search we have made.
+### EXTRA: We save and collect the data at the LocalStorage to keep the last search we have made.
 
 ---
 

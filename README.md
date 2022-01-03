@@ -82,7 +82,7 @@ And in the event that the user navigates to a non-existent URL, such as for exam
 
 ![image](https://user-images.githubusercontent.com/81588630/139126733-277f9d69-66db-4d69-9278-13ab401de713.png)
 
-#### BONUS: a reset button has been added that eliminates the searches included in the localstorage
+### BONUS: a reset button has been added that eliminates the searches included in the localstorage
 
 ### BONUS: Use a grid system to paint the list of characters. 
 

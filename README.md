@@ -1,10 +1,10 @@
-# Statement and requirements of the exercise
+# 📄 Statement and requirements of the exercise
 
 The exercise consists of developing a web page with a list of Rick and Morty characters.
 
 ![image](https://user-images.githubusercontent.com/81588630/139122729-965e29e9-38ce-46ee-9598-3762e7b119be.png)
 
-### INDEX 
+### INDEX
 
 1. [Data structure](#Data-structure)
 2. [List of characters](#List-of-characters)
@@ -74,7 +74,6 @@ You can also go through the pages with the different results.
 
 ![image](https://user-images.githubusercontent.com/81588630/147592667-01755c9d-9aec-466e-8174-913ea777e5c0.png)<br>
 
-
 ## Extra Functionalities
 
 The URL of the character detail is shareable, that is, if we visit that URL directly in the browser, the character detail will be seen. <br> If we refresh the browser in the detail of a character, it should show the detail of the character again.<br>
@@ -84,13 +83,14 @@ And in the event that the user navigates to a non-existent URL, such as for exam
 
 ### BONUS: a reset button has been added that eliminates the searches included in the localstorage
 
-### BONUS: Use a grid system to paint the list of characters. 
+### BONUS: Use a grid system to paint the list of characters.
 
 ### EXTRA: We save and collect the data at the LocalStorage to keep the last search we have made.
 
 ---
 
-## Technologies  🛠️ <br> 
+## Technologies 🛠️ <br>
+
 React / JS / SCSS <br>
 
 ## STAR IN LOCAL 🚀

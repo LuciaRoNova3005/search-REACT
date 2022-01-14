@@ -1,4 +1,4 @@
-# 📄 Statement and requirements of the exercise
+# Statement and requirements of the exercise 📄
 
 The exercise consists of developing a web page with a list of Rick and Morty characters.
 
